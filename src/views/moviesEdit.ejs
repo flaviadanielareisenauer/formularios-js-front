@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,10 @@
 <body>
     <figure>
         <img src="/img/logo-DH.png" alt="Logo Digital House">
-      </figure>
+    </figure>
+
     <h1 class="titulo">Película Editada:  <%= Movie.title %></h1>
-    <section class="formulario">
-        
+    <section class="formulario">        
             <form action="/movies/update/<%= Movie.id %>?_method=PUT" method="POST">
                 <label for="title">Título </label>
                 <p><input type="text" name="title" id="" value="<%= Movie.title %>" required></p>
@@ -33,12 +34,10 @@
                         <% }); %>
                     </select>
                 </p>
-
         <!--
                 <label for="genre_id">Genre ID </label>
                 <p><input type="number" name="genre_id" id="" value="<%= Movie.genre_id %>"></p>
-            -->
-                
+            -->                
                 <br>
                 <p> <button class="botonAgregar" type="submit">Actualizar</button>
             
@@ -48,5 +47,4 @@
     </section>
     <script src="/js/movies"></script>
 </body>
-
 </html>
